@@ -11,7 +11,7 @@ test('Verify guest customer can browse store and view Winter jacket details', as
 
   const storeLink = page.getByRole('link', { name: /^store$/i });
   await expect(storeLink).toBeVisible();
-  await storeLink.click();
+  await storeLink.click(); 
   // Verify navigation to the /vn/store catalog page
   await expect(page).toHaveURL(/.*\/store/);
 
@@ -29,3 +29,4 @@ test('Verify guest customer can browse store and view Winter jacket details', as
   const productTitle = page.getByRole('heading', { name: /Winter jacket/i });
   await expect(productTitle).toBeVisible();
 });
+  
